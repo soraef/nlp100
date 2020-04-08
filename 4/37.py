@@ -96,7 +96,7 @@ class Sentence:
 
 def load_mecab_file(from_path):
     sentences = []
-    with open(mecab_file, encoding="utf-8") as f:
+    with open(from_path, encoding="utf-8") as f:
         line = f.readline()
         sentence = Sentence()
         while line:
