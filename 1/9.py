@@ -1,6 +1,6 @@
-# 09
 import random
 
+# p94 早めに返してネストを削除する
 def shafful(word):
     if len(word) <= 4:
         return word

@@ -1,5 +1,3 @@
-# 06
-
 def ngram(n, words):
     ngrams = []
     

@@ -1,0 +1,45 @@
+// かかり受け木
+digraph {
+	graph [fontname="MS Gothic"]
+	node [color=blue fontname="MS Gothic" shape=box style=rounded]
+	edge [color=gray fontname="MS Gothic" penwidth=1.5]
+	0 [label=ROOT]
+	6 [label=related]
+	0 -> 6
+	2 [label=such]
+	1 [label=As]
+	2 -> 1
+	6 [label=related]
+	2 [label=such]
+	6 -> 2
+	6 [label=related]
+	3 [label=","]
+	6 -> 3
+	6 [label=related]
+	4 [label=NLP]
+	6 -> 4
+	6 [label=related]
+	5 [label=is]
+	6 -> 5
+	9 [label=area]
+	7 [label=to]
+	9 -> 7
+	9 [label=area]
+	8 [label=the]
+	9 -> 8
+	6 [label=related]
+	9 [label=area]
+	6 -> 9
+	12 [label=interaction]
+	10 [label=of]
+	12 -> 10
+	12 [label=interaction]
+	11 [label="humani-computer"]
+	12 -> 11
+	9 [label=area]
+	12 [label=interaction]
+	9 -> 12
+	6 [label=related]
+	13 [label="."]
+	6 -> 13
+}
