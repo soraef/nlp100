@@ -4,7 +4,7 @@ words = text.replace(",", " ").replace(".",  " ").split()
 
 for i, word in enumerate(words):
     number = i + 1
-    if(number in [1, 5, 6, 7, 8, 9, 15, 16, 19]):
+    if number in [1, 5, 6, 7, 8, 9, 15, 16, 19]:
         element2pos[word[0]] = number
     else:
         element2pos[word[0:2]] = number
