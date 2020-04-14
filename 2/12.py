@@ -7,8 +7,6 @@ with open("hightemp.txt", encoding="utf-8") as f:
 col1 = [row[0] for row in reader]
 col2 = [row[1] for row in reader]
 
-print(col1)
-
 with open("col1.txt", mode="w", encoding="utf-8") as f:
     f.writelines("\n".join(col1))
 

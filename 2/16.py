@@ -17,3 +17,7 @@ for i in range(n):
         f.writelines("\n".join(data[start:end]))
     start = end
     add_count -= 1
+
+# split --number=l/5 hightemp.txt hightemp_
+# hightemp_aa, hightemp_ab, hightemp_ac, hightemp_ad, hightemp_ae
+# に分割される
