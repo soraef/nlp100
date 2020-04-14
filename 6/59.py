@@ -5,25 +5,39 @@ tree = ET.parse("../data/nlp.txt.xml")
 root = tree.getroot()
 
 def find_np(s):
-    for np in re.finditer(r"\(NP", s):
-        stack = ["("]
-        cnt   = np.start() + 3
+    for np_s in re.finditer(r"\(NP", s):
+        # カッコの数
+        # (NP の次から走査するので1で初期化
+        brackets_count = 1
+        ptr   = np_s.start() + 3
 
-        while stack:
-            if s[cnt] == "(":
-                stack.append("(")
-            elif s[cnt] == ")":
-                stack.pop()
-            cnt += 1
+        # ptrを'(NP'と対応がとれる')'の位置まで進める
+        while brackets_count:
+            if s[ptr] == "(":
+                brackets_count += 1
+            elif s[ptr] == ")":
+                brackets_count -= 1
+            ptr += 1
 
-        np_s = s[np.start():cnt]
-        print(np_s)
-        remove_s(np_s)
-        break
+        yield s[np_s.start():ptr] 
 
-def remove_s(s):
-    print(re.sub(r"^\(.*?\s(.*)\)$", r"\1", s))
+# (HOGR hoge)のような形を探してhogeを返す
+def find_word(s):
+    return re.findall(r"\([^()]*\s([^()]*)\)", s)
 
 for parse in root.iter("parse"):
-    find_np(parse.text)
-    break
+    for np_s in find_np(parse.text):
+        print(" ".join(find_word(np_s)))
+
+#
+# 出力
+# Natural language processing
+# Wikipedia
+# the free encyclopedia Natural language processing -LRB- NLP -RRB-
+# the free encyclopedia Natural language processing
+# NLP
+# a field of computer science , artificial intelligence , and linguistics concerned with the interactions between computers and human -LRB- natural -RRB- languages 
+# a field of computer science
+# a field
+# ...
+#
