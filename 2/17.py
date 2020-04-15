@@ -5,6 +5,7 @@ with open("hightemp.txt", encoding="utf-8") as f:
     reader = list(csv.reader(f, delimiter = "\t"))
     
 reader = [row[0] for row in reader]
+# p172 身近なライブラリに親しむ
 prefs = list(set(reader))
 sorted_prefs = sorted(sorted(prefs), key=len)
 
