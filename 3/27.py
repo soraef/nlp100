@@ -1,11 +1,4 @@
-#
-# 26
-# リーダブルコード/p123/9.3
-# 変数は一度だけ書き込む
-# textから基礎情報を抜き出したらbasic_info_text
-# basic_info_textを行ごとに分割したらbasic_info_lines
-# のように変数に再代入をせずに適切な名前を適宜つける
-# 
+# 27
 
 import json
 import gzip

@@ -1,6 +1,6 @@
 # 11
 with open("hightemp.txt") as f:
-    print(f.read().replace("\t", ",").rstrip("\n"))
+    print(f.read().replace("\t", " ").rstrip("\n"))
     
 # cat hightemp.txt | tr '\t' ','
 # 高知県,江川崎,41,2013-08-12
