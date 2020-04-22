@@ -9,23 +9,9 @@ class Node:
         self.base = base
         self.pos = pos
         self.pos1 = pos1
-
-    def get_dict(self):
-        return {
-            "surface": self.surface,
-            "base"   : self.base,
-            "pos"    : self.pos,
-            "pos1"   : self.pos1,
-        }
-
-    def is_verb(self):
-        return "動詞" == self.pos[:2]
     
     def is_noun(self):
         return "名詞" == self.pos[:2]
-    
-    def is_sahen(self):
-        return self.is_noun() and "サ変接続" == self.pos1[:4]
     
     # 「の」かどうか
     def is_no(self):
@@ -43,8 +29,6 @@ class Node:
         base    = line.split("\t")[1].split(",")[6]
 
         return cls(surface, base, pos, pos1)
-    
-
 
 class Sentence:
     def __init__(self):
@@ -52,30 +36,18 @@ class Sentence:
     
     def add_node(self, node):
         self.nodes.append(node)
-    
-    def get_nodes_dict(self):
-        return list(map(lambda node: node.get_dict(), self.nodes))
-
-    def get_verbs(self):
-        return [node.surface for node in self.nodes if node.is_verb()]
-    
-    def get_base_verbs(self):
-        return [node.base for node in self.nodes if node.is_verb()]
-    
-    def get_sahen_nouns(self):
-        return [node.surface for node in self.nodes if node.is_sahen()]
 
     def get_nouns_between_no(self):
         nouns = []
         for i in range(len(self.nodes)):
             if i == 0 or i == len(self.nodes) - 1 or len(self.nodes) < 3:
                 continue
+            # 名詞の名詞となっている場合
             if self.nodes[i-1].is_noun() and self.nodes[i+1].is_noun() and self.nodes[i].is_no():
                 text = self.nodes[i-1].surface + self.nodes[i].surface + self.nodes[i+1].surface
                 nouns.append(text)
 
         return nouns
-
 
 
 def load_mecab_file(from_path):
@@ -98,10 +70,21 @@ def load_mecab_file(from_path):
 sentences = load_mecab_file(mecab_file)
 
 nouns = []
-
 for sentence in sentences:
     nouns += sentence.get_nouns_between_no()
 
 nouns = list(set(nouns))
 
-pprint.pprint(nouns[0:100])
+for noun in nouns[0:10]:
+    print(noun)
+
+# 甕の中
+# 本人の弁解
+# 学校の行き帰り
+# 膏のよう
+# 枚の写真
+# 心のため
+# 立ての小笠原
+# 一寸の余地
+# ほかの病気
+# こっちのあばた

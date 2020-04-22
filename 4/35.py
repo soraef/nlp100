@@ -10,14 +10,6 @@ class Node:
         self.pos = pos
         self.pos1 = pos1
 
-    def get_dict(self):
-        return {
-            "surface": self.surface,
-            "base"   : self.base,
-            "pos"    : self.pos,
-            "pos1"   : self.pos1,
-        }
-
     def is_verb(self):
         return "動詞" == self.pos[:2]
     
@@ -45,7 +37,6 @@ class Node:
         return cls(surface, base, pos, pos1)
     
 
-
 class Sentence:
     def __init__(self):
         self.nodes = []
@@ -53,30 +44,7 @@ class Sentence:
     def add_node(self, node):
         self.nodes.append(node)
     
-    def get_nodes_dict(self):
-        return list(map(lambda node: node.get_dict(), self.nodes))
-
-    def get_verbs(self):
-        return [node.surface for node in self.nodes if node.is_verb()]
-    
-    def get_base_verbs(self):
-        return [node.base for node in self.nodes if node.is_verb()]
-    
-    def get_sahen_nouns(self):
-        return [node.surface for node in self.nodes if node.is_sahen()]
-
-    def get_nouns_between_no(self):
-        nouns = []
-        for i in range(len(self.nodes)):
-            if i == 0 or i == len(self.nodes) - 1 or len(self.nodes) < 3:
-                continue
-            if self.nodes[i-1].is_noun() and self.nodes[i+1].is_noun() and self.nodes[i].is_no():
-                text = self.nodes[i-1].surface + self.nodes[i].surface + self.nodes[i+1].surface
-                nouns.append(text)
-
-        return nouns
-    
-    def get_connected_nons(self):
+    def get_connected_nouns(self):
         nouns = []
         noun = ""
         num = 0
@@ -90,9 +58,11 @@ class Sentence:
                 noun = ""
                 num  = 0
 
+        # 名詞の連接で終わる場合
+        if num > 1:
+            nouns.append(noun)
+
         return nouns
-
-
 
 
 def load_mecab_file(from_path):
@@ -115,10 +85,22 @@ def load_mecab_file(from_path):
 sentences = load_mecab_file(mecab_file)
 
 nouns = []
-
 for sentence in sentences:
-    nouns += sentence.get_connected_nons()
+    nouns += sentence.get_connected_nouns()
 
 nouns = list(set(nouns))
 
-pprint.pprint(nouns[0:100])
+for noun in nouns[0:10]:
+    print(noun)
+
+# 三平君
+# 大変目
+# 美学研究
+# 三日三晩
+# 表裏二枚合せ
+# 月桂寺さん
+# 高山彦九郎
+# 向う横町
+# 二階
+# 大分みんな
+# ...

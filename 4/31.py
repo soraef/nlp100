@@ -70,13 +70,25 @@ def load_mecab_file(from_path):
 sentences = load_mecab_file(mecab_file)
 
 verbs = []
-
 for sentence in sentences:
     verbs += sentence.get_verbs()
 
 verbs = list(set(verbs))
 
-pprint.pprint(verbs[0:100])
+for verb in verbs:
+    print(verb)
+
+# 通せ
+# 苦しん
+# ふくらまし
+# かこつ
+# すわ
+# 持ち上がっ
+# 走る
+# 窶し
+# 盛っ
+# すん
+# ...
 
 
 

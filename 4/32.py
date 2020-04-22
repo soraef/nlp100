@@ -45,9 +45,6 @@ class Sentence:
     
     def get_nodes_dict(self):
         return list(map(lambda node: node.get_dict(), self.nodes))
-
-    def get_verbs(self):
-        return [node.surface for node in self.nodes if node.is_verb()]
     
     def get_base_verbs(self):
         return [node.base for node in self.nodes if node.is_verb()]
@@ -79,4 +76,17 @@ for sentence in sentences:
 
 base_verbs = list(set(base_verbs))
 
-pprint.pprint(base_verbs[0:100])
+for verb in base_verbs:
+    print(verb)
+
+# 売り捌く
+# つぐ
+# 融ける
+# 抑える
+# 論ずる
+# 忍ぶ
+# 極まる
+# 告げる
+# かく
+# 仰向く
+# ...

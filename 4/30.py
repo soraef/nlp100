@@ -11,6 +11,8 @@ class Node:
             "pos1"   : pos1,
             }
 
+    # 吾輩	名詞,代名詞,一般,*,*,*,吾輩,ワガハイ,ワガハイ
+    # を受け取りNode オブジェクトを生成するクラスメソッド
     @classmethod
     def from_txt(cls, line):
         surface = line.split("\t")[0]
@@ -34,7 +36,7 @@ class Sentence:
     def get_nodes_dict(self):
         return list(map(lambda node: node.dict, self.nodes))
 
-
+# .mecabを読み込みSentenceオブジェクトとNodeオブジェクトを組み立てる
 def load_mecab_file(from_path):
     sentences = []
     with open(from_path, encoding="utf-8") as f:
@@ -55,9 +57,16 @@ def load_mecab_file(from_path):
 sentences = load_mecab_file(mecab_file)
 
 sentences = [sentence.get_nodes_dict() for sentence in sentences]
-pprint.pprint(sentences[0:5])
+pprint.pprint(sentences[0:2])
 
-        
+# [[{'base': '一', 'pos': '名詞', 'pos1': '数', 'surface': '一'}],
+#  [{'base': '\u3000', 'pos': '記号', 'pos1': '空白', 'surface': '\u3000'},
+#   {'base': '吾輩', 'pos': '名詞', 'pos1': '代名詞', 'surface': '吾輩'},
+#   {'base': 'は', 'pos': '助詞', 'pos1': '係助詞', 'surface': 'は'},
+#   {'base': '猫', 'pos': '名詞', 'pos1': '一般', 'surface': '猫'},
+#   {'base': 'だ', 'pos': '助動詞', 'pos1': '*', 'surface': 'で'},
+#   {'base': 'ある', 'pos': '助動詞', 'pos1': '*', 'surface': 'ある'},
+#   {'base': '。', 'pos': '記号', 'pos1': '句点', 'surface': '。'}]]        
             
 
     

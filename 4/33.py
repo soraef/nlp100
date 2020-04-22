@@ -9,17 +9,6 @@ class Node:
         self.base = base
         self.pos = pos
         self.pos1 = pos1
-
-    def get_dict(self):
-        return {
-            "surface": self.surface,
-            "base"   : self.base,
-            "pos"    : self.pos,
-            "pos1"   : self.pos1,
-        }
-
-    def is_verb(self):
-        return "動詞" == self.pos[:2]
     
     def is_noun(self):
         return "名詞" == self.pos[:2]
@@ -39,8 +28,6 @@ class Node:
         base    = line.split("\t")[1].split(",")[6]
 
         return cls(surface, base, pos, pos1)
-    
-
 
 class Sentence:
     def __init__(self):
@@ -48,15 +35,6 @@ class Sentence:
     
     def add_node(self, node):
         self.nodes.append(node)
-    
-    def get_nodes_dict(self):
-        return list(map(lambda node: node.get_dict(), self.nodes))
-
-    def get_verbs(self):
-        return [node.surface for node in self.nodes if node.is_verb()]
-    
-    def get_base_verbs(self):
-        return [node.base for node in self.nodes if node.is_verb()]
     
     def get_sahen_nouns(self):
         return [node.surface for node in self.nodes if node.is_sahen()]
@@ -82,10 +60,23 @@ def load_mecab_file(from_path):
 sentences = load_mecab_file(mecab_file)
 
 nouns = []
-
 for sentence in sentences:
     nouns += sentence.get_sahen_nouns()
 
 nouns = list(set(nouns))
 
-pprint.pprint(nouns[0:100])
+for noun in nouns[0:10]:
+    print(noun)
+
+
+# 新築
+# 見当
+# 命令
+# 敬服
+# 相当
+# 拱手
+# 思案
+# 猶予
+# 密着
+# 薫陶
+# ...
