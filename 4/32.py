@@ -10,14 +10,6 @@ class Node:
         self.pos = pos
         self.pos1 = pos1
 
-    def get_dict(self):
-        return {
-            "surface": self.surface,
-            "base"   : self.base,
-            "pos"    : self.pos,
-            "pos1"   : self.pos1,
-        }
-
     def is_verb(self):
         return "動詞" == self.pos[:2]
 
@@ -43,9 +35,6 @@ class Sentence:
     def add_node(self, node):
         self.nodes.append(node)
     
-    def get_nodes_dict(self):
-        return list(map(lambda node: node.get_dict(), self.nodes))
-    
     def get_base_verbs(self):
         return [node.base for node in self.nodes if node.is_verb()]
 
@@ -70,7 +59,6 @@ def load_mecab_file(from_path):
 sentences = load_mecab_file(mecab_file)
 
 base_verbs = []
-
 for sentence in sentences:
     base_verbs += sentence.get_base_verbs()
 
