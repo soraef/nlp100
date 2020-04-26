@@ -168,8 +168,24 @@ sentences = load_mecab_file(mecab_file)
 
 chanks = []
 
-for sentence in sentences:
+for sentence in sentences[0:10]:
     chanks.extend(sentence.get_connected_two_chunks())
 
 for chank in chanks:
     print(chank)
+
+# 
+# どこで  生れたか
+# 見当が  つかぬ
+# 所で    泣いて
+# ニャーニャー    泣いて
+# いた事だけは    記憶している
+# 吾輩は  見た
+# ここで  始めて
+# ものを  見た
+# あとで  聞くと
+# 我々を  捕えて
+# 掌に    載せられて
+# スーと  持ち上げられた
+# 時      フワフワした
+# 感じが  あったばかりである

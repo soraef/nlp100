@@ -171,7 +171,7 @@ class Sentence:
                 continue
 
             # サ変接続名詞＋をの文節は述部なので除く
-            srcs = chunk.srcs[:]
+            srcs = chunk.srcs
             srcs.remove(sahen_wo_src)
 
             particle_chunks = []
@@ -185,7 +185,6 @@ class Sentence:
                 continue
             
             sorted_particle_chunks = sorted(particle_chunks, key=lambda x: x[0])
-            pprint.pprint(sorted_particle_chunks)
             particle_str = " ".join([particle[0] for particle in sorted_particle_chunks])
             chunk_str    = " ".join([particle[1] for particle in sorted_particle_chunks])
             pattern = f"{sahen_wo + verb}\t{particle_str}\t{chunk_str}"

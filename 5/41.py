@@ -116,3 +116,15 @@ def load_mecab_file(from_path):
 
 sentences = load_mecab_file(mecab_file)
 sentences[7].print_chunks()
+
+# 
+# 出力
+# 
+# {'chunk_surface': 'この', 'dst': 1}
+# {'chunk_surface': '書生というのは', 'dst': 7}
+# {'chunk_surface': '時々', 'dst': 4}
+# {'chunk_surface': '我々を', 'dst': 4}
+# {'chunk_surface': '捕えて', 'dst': 5}
+# {'chunk_surface': '煮て', 'dst': 6}
+# {'chunk_surface': '食うという', 'dst': 7}
+# {'chunk_surface': '話である。', 'dst': -1}

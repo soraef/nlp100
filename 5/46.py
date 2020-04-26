@@ -158,7 +158,7 @@ class Sentence:
                 continue
             
             sorted_particle_chunks = sorted(particle_chunks, key=lambda x: x[0])
-            pprint.pprint(sorted_particle_chunks)
+            # pprint.pprint(sorted_particle_chunks)
             particle_str = " ".join([particle[0] for particle in sorted_particle_chunks])
             chunk_str    = " ".join([particle[1] for particle in sorted_particle_chunks])
             pattern = f"{verb}\t{particle_str}\t{chunk_str}"
@@ -217,5 +217,18 @@ verb_case_list = []
 for sentence in sentences:
     verb_case_list.extend(sentence.get_verb_case())
 
+for verb_case in verb_case_list:
+    print(verb_case)
+
 with open("verb_case_46.txt", encoding="utf-8", mode="w") as f:
     f.writelines("\n".join(verb_case_list))
+
+
+# 生れる	で	どこで
+# つく	か が	生れたか 見当が
+# 泣く	で	所で
+# する	て は	泣いて いた事だけは
+# 始める	で	ここで
+# 見る	は を	吾輩は ものを
+# 聞く	で	あとで
+# 捕える	を	我々を

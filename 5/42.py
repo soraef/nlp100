@@ -146,8 +146,19 @@ sentences = load_mecab_file(mecab_file)
 chanks = []
 
 
-for sentence in sentences:
+for sentence in sentences[0:4]:
     chanks.extend(sentence.get_connected_two_chunks())
 
 for chank in chanks:
     print(chank)
+
+#
+# 出力
+# 
+# 輩は  猫である
+# 名前は  無い
+# まだ    無い
+# どこで  生れたか
+# 生れたか        つかぬ
+# とんと  つかぬ
+# 見当が  つかぬ

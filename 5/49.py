@@ -84,6 +84,7 @@ class Chunk:
 
         return chunk_surface
 
+    # 名詞句を置換したsurfaceを取得する
     def get_surface_sub_noun(self, sub_str):
         surface = ""
         for morph in self.morphs:
@@ -91,7 +92,9 @@ class Chunk:
                 surface += sub_str
             elif not morph.is_symbol():
                 surface += morph.surface
-        return surface
+        # XXのような重複を除く
+        return re.sub(r"%s+" % sub_str, r"%s" % sub_str, surface)
+
 
 
     def is_contain(self, pos="", pos1="", surface="", base=""):
@@ -157,13 +160,13 @@ class Sentence:
         for chunk in self.chunks:
             print(chunk)
 
-    def get_paths_between_nouns(self):
+    def print_paths_between_nouns(self):
         dst_between_nouns = [] # (i, j)を要素に持つリスト
         len_chunks = len(self.chunks)
         for i in range(len_chunks):
             if not self.chunks[i].is_contain_noun():
                 continue
-            for j in range(i+1, len_chunks):
+            for j in range(i + 1, len_chunks):
                 if not self.chunks[j].is_contain_noun():
                     continue
                 dst_between_nouns.append((i, j))
@@ -174,14 +177,17 @@ class Sentence:
         
     def get_chunk_path(self, i, j):
         path = []
+        path_num = [] #パスの文節番号を保存しておくリスト
         start_chunk = self.chunks[i]
         path.append(start_chunk.get_surface_sub_noun("X"))
+        path_num.append(i)
 
         next_chunk_num = start_chunk.dst
         next_chunk  = self.get_next_chunk(start_chunk)
 
         while next_chunk:
             path.append(next_chunk.get_chunk_surface())
+            path_num.append(next_chunk_num)
             # i, jのパスが存在した場合はそのまま返す
             if next_chunk_num == j:
                 path[-1] = next_chunk.get_surface_sub_noun("Y")
@@ -194,15 +200,19 @@ class Sentence:
         # j から根に向かってchunkを見ていき, kを見つける
         j_path = []
         start_chunk = self.chunks[j]
+        next_chunk_num = start_chunk.dst
         next_chunk  = self.get_next_chunk(start_chunk)
         j_path.append(start_chunk.get_surface_sub_noun("Y"))
 
         while next_chunk:
             j_path.append(next_chunk.get_chunk_surface())
-            if next_chunk.get_chunk_surface() in path:
-                idx = path.index(next_chunk.get_chunk_surface())
+            # 文節iと文節jから構文木の根に至る経路上での共通の文節kを見つけたい
+            # next_chunk_numがkかどうか判定する
+            if next_chunk_num in path_num:
+                idx = path_num.index(next_chunk_num)
                 path = path[:idx]
                 break
+            next_chunk_num = next_chunk.dst
             next_chunk = self.get_next_chunk(next_chunk)
         
         # path: xからkの一つ手前までのリスト
@@ -210,74 +220,11 @@ class Sentence:
 
         return " -> ".join(path) + " | " + " -> ".join(j_path[:-1]) + " | " + j_path[-1] 
         
-
-
-
-    def get_chunk_paths(self):
-        paths = []
-        for chunk in self.chunks:
-            if not chunk.is_contain_noun():
-                continue
-
-            path_strs = [chunk.get_chunk_surface()]
-            next_chunk = self.get_next_chunk(chunk)
-
-            while next_chunk:
-                path_strs.append(next_chunk.get_chunk_surface())
-                next_chunk = self.get_next_chunk(next_chunk)
-            
-            paths.append(path_strs)
-        return paths
             
     def get_next_chunk(self, chunk):
         if chunk.dst == -1:
             return None
         return self.chunks[chunk.dst]
-
-    def get_verb_case(self):
-        verb_cases = []
-        for chunk_num, chunk in enumerate(self.chunks):
-
-            if not chunk.is_contain_verb():
-                continue
-
-            verb = chunk.get_first_verb()
-
-            # 動詞にかかる「サ変接続名詞+を（助詞）」で構成される文節があるか調べる
-            sahen_wo = ""
-            sahen_wo_src = -1
-            for src in chunk.srcs:
-                src_chunk = self.chunks[src]
-                sahen_wo = src_chunk.get_sahen_wo()
-                if sahen_wo:
-                    sahen_wo_src = src
-                    break
-            
-            if not sahen_wo:
-                continue
-
-            # サ変接続名詞＋をの文節は述部なので除く
-            srcs = chunk.srcs[:]
-            srcs.remove(sahen_wo_src)
-
-            particle_chunks = []
-            for src in srcs:
-                src_chunk = self.chunks[src]
-                if src_chunk.is_contain_particle():
-                    particle = src_chunk.get_last_particles()
-                    particle_chunks.append([particle, src_chunk.get_chunk_surface(True)])
-            
-            if not particle_chunks:
-                continue
-            
-            sorted_particle_chunks = sorted(particle_chunks, key=lambda x: x[0])
-            pprint.pprint(sorted_particle_chunks)
-            particle_str = " ".join([particle[0] for particle in sorted_particle_chunks])
-            chunk_str    = " ".join([particle[1] for particle in sorted_particle_chunks])
-            pattern = f"{sahen_wo + verb}\t{particle_str}\t{chunk_str}"
-            verb_cases.append(pattern)
-
-        return verb_cases
     
     # linesはEOSまでのtxt.cabocha各行をリストに格納した形(EOSは含まない)
     @classmethod
@@ -327,6 +274,24 @@ sentences = load_mecab_file(mecab_file)
 
 verb_case_list = []
 
-for sentence in sentences[3:6]:
-    sentence.get_paths_between_nouns()
+for sentence in sentences[0:10]:
+    sentence.print_paths_between_nouns()
 
+# Xは -> Yである
+# Xで -> 生れたか | Yが | つかぬ
+# Xでも -> 薄暗い -> じめじめした -> Yで
+# Xでも -> 薄暗い -> じめじめした -> 所で | Y | 泣いて
+# Xでも -> 薄暗い -> じめじめした -> 所で -> 泣いて | Yだけは | 記憶している
+# Xでも -> 薄暗い -> じめじめした -> 所で -> 泣いて -> Yしている
+# Xで | Y | 泣いて
+# Xで -> 泣いて | Yだけは | 記憶している
+# Xで -> 泣いて -> Yしている
+# X -> 泣いて | Yだけは | 記憶している
+# X -> 泣いて -> Yしている
+# Xだけは -> Yしている
+# Xは | Yで -> 始めて -> 人間という -> ものを | 見た
+# Xは | Yという -> ものを | 見た
+# Xは | Yを | 見た
+# Xで -> 始めて -> Yという
+# Xで -> 始めて -> 人間という -> Yを
+# Xという -> Yを

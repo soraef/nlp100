@@ -75,3 +75,12 @@ def load_mecab_file(from_path):
 
 sentences = load_mecab_file(mecab_file)
 sentences[2].print_morphs()
+
+
+# 出力
+# 
+# {'base': '名前', 'pos': '名詞', 'pos1': '一般', 'surface': '名前'}
+# {'base': 'は', 'pos': '助詞', 'pos1': '係助詞', 'surface': 'は'}
+# {'base': 'まだ', 'pos': '副詞', 'pos1': '助詞類接続', 'surface': 'まだ'}
+# {'base': '無い', 'pos': '形容詞', 'pos1': '自立', 'surface': '無い'}
+# {'base': '。', 'pos': '記号', 'pos1': '句点', 'surface': '。'}

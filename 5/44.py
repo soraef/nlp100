@@ -101,11 +101,6 @@ class Sentence:
     def print_chunks(self):
         for chunk in self.chunks:
             print(chunk)
-    
-    def chunks_dot(self):
-        return [(chunk.get_chunk_surface(True), self.chunks[chunk.dst].get_chunk_surface(True)) 
-                    for chunk in self.chunks 
-                        if not chunk.dst == -1 and chunk.get_chunk_surface(True) and self.chunks[chunk.dst].get_chunk_surface(True)]
 
     
     # linesはEOSまでのtxt.cabocha各行をリストに格納した形(EOSは含まない)
@@ -154,13 +149,6 @@ def load_mecab_file(from_path):
 
 sentences = load_mecab_file(mecab_file)
 
-chanks = []
-chunk_dots = []
-
-for sentence in sentences[7:8]:
-    chunk_dots.extend(sentence.chunks_dot())
-
-
 dot_filename = "44"
 datas_dir    = "./"
 
@@ -178,9 +166,16 @@ dot.attr('graph', fontname=fontname)
 dot.attr('node', fontname=fontname, shape='box', color='blue', style='rounded')
 dot.attr('edge', fontname=fontname, penwidth='1.5', color='gray')
 
-for chunk_dot in chunk_dots:
-    print(chunk_dot)
-    dot.edge(chunk_dot[0], chunk_dot[1])
+target_sentence = sentences[3]
+
+for i, chunk in enumerate(target_sentence.chunks):
+    surface1 = chunk.get_chunk_surface(True)
+    surface2 = target_sentence.chunks[chunk.dst].get_chunk_surface(True)
+    if not chunk.dst == -1 and surface1 and surface2:
+        # dot.node(識別子, 表示名)
+        dot.node(str(i), surface1)
+        dot.node(str(chunk.dst), surface2)
+        dot.edge(str(i), str(chunk.dst))
 
 dot.render()
 

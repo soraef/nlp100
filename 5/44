@@ -3,11 +3,16 @@ digraph {
 	graph [fontname="MS Gothic"]
 	node [color=blue fontname="MS Gothic" shape=box style=rounded]
 	edge [color=gray fontname="MS Gothic" penwidth=1.5]
-	"この" -> "書生というのは"
-	"書生というのは" -> "話である"
-	"時々" -> "捕えて"
-	"我々を" -> "捕えて"
-	"捕えて" -> "煮て"
-	"煮て" -> "食うという"
-	"食うという" -> "話である"
+	0 [label="どこで"]
+	1 [label="生れたか"]
+	0 -> 1
+	1 [label="生れたか"]
+	4 [label="つかぬ"]
+	1 -> 4
+	2 [label="とんと"]
+	4 [label="つかぬ"]
+	2 -> 4
+	3 [label="見当が"]
+	4 [label="つかぬ"]
+	3 -> 4
 }

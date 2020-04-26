@@ -167,51 +167,6 @@ class Sentence:
         if chunk.dst == -1:
             return None
         return self.chunks[chunk.dst]
-
-    def get_verb_case(self):
-        verb_cases = []
-        for chunk_num, chunk in enumerate(self.chunks):
-
-            if not chunk.is_contain_verb():
-                continue
-
-            verb = chunk.get_first_verb()
-
-            # 動詞にかかる「サ変接続名詞+を（助詞）」で構成される文節があるか調べる
-            sahen_wo = ""
-            sahen_wo_src = -1
-            for src in chunk.srcs:
-                src_chunk = self.chunks[src]
-                sahen_wo = src_chunk.get_sahen_wo()
-                if sahen_wo:
-                    sahen_wo_src = src
-                    break
-            
-            if not sahen_wo:
-                continue
-
-            # サ変接続名詞＋をの文節は述部なので除く
-            srcs = chunk.srcs[:]
-            srcs.remove(sahen_wo_src)
-
-            particle_chunks = []
-            for src in srcs:
-                src_chunk = self.chunks[src]
-                if src_chunk.is_contain_particle():
-                    particle = src_chunk.get_last_particles()
-                    particle_chunks.append([particle, src_chunk.get_chunk_surface(True)])
-            
-            if not particle_chunks:
-                continue
-            
-            sorted_particle_chunks = sorted(particle_chunks, key=lambda x: x[0])
-            pprint.pprint(sorted_particle_chunks)
-            particle_str = " ".join([particle[0] for particle in sorted_particle_chunks])
-            chunk_str    = " ".join([particle[1] for particle in sorted_particle_chunks])
-            pattern = f"{sahen_wo + verb}\t{particle_str}\t{chunk_str}"
-            verb_cases.append(pattern)
-
-        return verb_cases
     
     # linesはEOSまでのtxt.cabocha各行をリストに格納した形(EOSは含まない)
     @classmethod
@@ -261,11 +216,14 @@ sentences = load_mecab_file(mecab_file)
 
 verb_case_list = []
 
-for sentence in sentences[5:6]:
+for sentence in sentences:
     paths_list = sentence.get_chunk_paths()
     paths = [ " -> ".join(path) for path in paths_list]
     for path in paths:
         print(path)
 
 
-
+# 吾輩は -> 見た
+# ここで -> 始めて -> 人間という -> ものを -> 見た
+# 人間という -> ものを -> 見た
+# ものを -> 見た

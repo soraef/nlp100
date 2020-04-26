@@ -117,28 +117,7 @@ class Sentence:
     def print_chunks(self):
         for chunk in self.chunks:
             print(chunk)
-
-    def get_connected_two_chunks(self):
-        two_chunks_list = []
-        for chunk in self.chunks:
-            if chunk.dst == -1:
-                continue
-            
-            # 名詞を含む文節が動詞を含む文節にかからないときはループを飛ばす
-            if not (chunk.is_contain_noun() and self.chunks[chunk.dst].is_contain_verb()):
-                continue
-
-            chunk_surface1 = chunk.get_chunk_surface(ignore_symbol=True)
-            chunk_surface2 = self.chunks[chunk.dst].get_chunk_surface(ignore_symbol=True)
-
-            if not chunk_surface1 or not chunk_surface2:
-                continue
-
-            surface = f"{chunk_surface1}\t{chunk_surface2}"
-            two_chunks_list.append(surface)
-        
-        return two_chunks_list
-
+    
     def get_verb_case(self):
         verb_cases = []
         for chunk in self.chunks:
