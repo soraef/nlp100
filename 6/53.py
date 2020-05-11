@@ -5,3 +5,19 @@ root = tree.getroot()
 
 for word in root.iter("word"):
     print(word.text)
+
+
+# 
+# 出力（一部）
+# 
+# atural
+# language
+# processing
+# From
+# Wikipedia
+# ,
+# the
+# free
+# encyclopedia
+# Natural
+# language

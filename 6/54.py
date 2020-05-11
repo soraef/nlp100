@@ -9,3 +9,19 @@ for token in root.iter("token"):
     pos = token.find("POS").text
 
     print(f"{word}\t{lemma}\t{pos}")
+
+
+# 
+# 出力（一部）
+# 
+# Natural natural JJ
+# language        language        NN
+# processing      processing      NN
+# From    from    IN
+# Wikipedia       Wikipedia       NNP
+# ,       ,       ,
+# the     the     DT
+# free    free    JJ
+# encyclopedia    encyclopedia    NN
+# Natural natural JJ
+# language        language        NN

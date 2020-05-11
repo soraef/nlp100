@@ -4,6 +4,7 @@ import re
 tree = ET.parse("../data/nlp.txt.xml")
 root = tree.getroot()
 
+# (NP ... )という形になっている文字列を見つける
 def find_np(s):
     for np_s in re.finditer(r"\(NP", s):
         # カッコの数
@@ -31,6 +32,7 @@ for parse in root.iter("parse"):
 
 #
 # 出力
+# 
 # Natural language processing
 # Wikipedia
 # the free encyclopedia Natural language processing -LRB- NLP -RRB-

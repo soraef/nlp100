@@ -23,3 +23,43 @@ for sentence in sentences[0:2]:
     for word in sentence.split(" "):
         print(word)
     print("")
+
+# 　
+# 出力
+# 
+# Natural
+# language
+# processing
+# NLP
+# is
+# a
+# field
+# of
+# computer
+# science
+# artificial
+# intelligence
+# and
+# linguistics
+# concerned
+# with
+# the
+# interactions
+# between
+# computers
+# and
+# human
+# natural
+# languages
+
+# As
+# such
+# NLP
+# is
+# related
+# to
+# the
+# area
+# of
+# humani-computer
+# interaction

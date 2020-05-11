@@ -8,3 +8,21 @@ for token in root.iter("token"):
     ner = token.find("NER").text
     if ner == "PERSON":
         print(word)
+
+# 
+# 出力
+# 
+# Alan
+# Turing
+# Joseph
+# Weizenbaum
+# MARGIE
+# Schank
+# Wilensky
+# Meehan
+# Lehnert
+# Carbonell
+# Lehnert
+# Racter
+# Jabberwacky
+# Moore
