@@ -4,8 +4,8 @@ tree = ET.parse("../data/nlp.txt.xml")
 root = tree.getroot()
 
 # 文字変換表を作成する
-# reconf_table[sentence_id][token_id] = 変換したい文字
-reconf_table = {}
+# table[sentence_id][token_id] = 変換したい文字
+table = {}
 coreferences = root.findall(".//coreference/coreference")
 
 for coreference in coreferences:
@@ -24,14 +24,14 @@ for coreference in coreferences:
         # tableを初期化する
         # とりあえずsentence_idのstartからendまでを空白で置き換えるように設定
         for token_id in range(start, end):
-            reconf_table[sentence_id] = {token_id: ""}
+            table[sentence_id] = {token_id: ""}
         
         # 変換したい文字を設定する
-        reconf_table[sentence_id][start] = f"「{representative_text}({text})」"
+        table[sentence_id][start] = f"「{representative_text}({text})」"
 
 # xmlをtextに置き換えていく
 # 変換表に文字列があれば文字列を置き換える
-def xml2text(root, reconf_table):
+def xml2text(root, table):
     sentences = root.findall(".//sentences/sentence")
     for sentence in sentences:
         sentence_id = int(sentence.attrib["id"])
@@ -40,7 +40,7 @@ def xml2text(root, reconf_table):
             word = token.find("word").text
 
             # 変換表に変換すべき文字があればその文字を代入
-            text_or_none = reconf_table.get(sentence_id, {}).get(token_id, None)
+            text_or_none = table.get(sentence_id, {}).get(token_id, None)
             
             if text_or_none is None:
                 print(word, end=" ")
@@ -48,7 +48,7 @@ def xml2text(root, reconf_table):
                 print(text_or_none, end=" ")
                 
 
-xml2text(root, reconf_table)
+xml2text(root, table)
 
 
 # 
