@@ -1,0 +1,206 @@
+Abkhazia, Republic of	アブハジア	-	-	東ヨーロッパ	-	-
+Afghanistan	アフガニスタン	AF	AFG	中東	○	○
+Albania	アルバニア	AL	ALB	東ヨーロッパ	○	○
+Algeria	アルジェリア	DZ	DZA	北アフリカ	○	○
+Andorra	アンドラ	AD	AND	西ヨーロッパ	○	○
+Angola	アンゴラ	AO	AGO	南アフリカ	○	○
+Antigua and Barbuda	アンティグア・バーブーダ	AG	ATG	中央アメリカ	○	○
+Argentina	アルゼンチン	AR	ARG	南アメリカ	○	○
+Armenia	アルメニア	AM	ARM	東ヨーロッパ	○	○
+Australia	オーストラリア	AU	AUS	オセアニア	○	○
+Austria	オーストリア	AT	AUT	東ヨーロッパ	○	○
+Azerbaijan	アゼルバイジャン	AZ	AZE	東ヨーロッパ	○	○
+Bahamas	バハマ	BS	BHS	中央アメリカ	○	○
+Bahrain	バーレーン	BH	BHR	中東	○	○
+Bangladesh	バングラデシュ	BD	BGD	南アジア	○	○
+Barbados	バルバドス	BB	BRB	中央アメリカ	○	○
+Belarus	ベラルーシ	BY	BLR	東ヨーロッパ	○	○
+Belgium	ベルギー	BE	BEL	西ヨーロッパ	○	○
+Belize	ベリーズ	BZ	BLZ	中央アメリカ	○	○
+Benin	ベナン	BJ	BEN	西アフリカ	○	○
+Bhutan	ブータン	BT	BTN	南アジア	○	○
+Bolivia, Plurinational State of	ボリビア	BO	BOL	南アメリカ	○	○
+Bosnia and Herzegovina	ボスニア・ヘルツェゴビナ	BA	BIH	東ヨーロッパ	○	○
+Botswana	ボツワナ	BW	BWA	南アフリカ	○	○
+Brazil	ブラジル	BR	BRA	南アメリカ	○	○
+Brunei Darussalam	ブルネイ	BN	BRN	東南アジア	○	○
+Bulgaria	ブルガリア	BG	BGR	東ヨーロッパ	○	○
+Burkina Faso	ブルキナファソ	BF	BFA	西アフリカ	○	○
+Burundi	ブルンジ	BI	BDI	中央アフリカ	○	○
+Cambodia	カンボジア	KH	KHM	東南アジア	○	○
+Cameroon	カメルーン	CM	CMR	中央アフリカ	○	○
+Canada	カナダ	CA	CAN	北アメリカ	○	○
+Cape Verde	カーボベルデ	CV	CPV	西アフリカ	○	○
+Central African Republic	中央アフリカ共和国	CF	CAF	中央アフリカ	○	○
+Chad	チャド	TD	TCD	中央アフリカ	○	○
+Chile	チリ	CL	CHL	南アメリカ	○	○
+China	中国	CN	CHN	東アジア	○	○
+Colombia	コロンビア	CO	COL	南アメリカ	○	○
+Comoros	コモロ	KM	COM	インド洋地域	○	○
+Congo	コンゴ共和国	CG	COG	中央アフリカ	○	○
+Congo, the Democratic Republic of the	コンゴ民主共和国	CD	COD	中央アフリカ	○	○
+Cook Islands	クック諸島	CK	COK	オセアニア	-	○
+Costa Rica	コスタリカ	CR	CRI	中央アメリカ	○	○
+Côte d'Ivoire	コートジボワール	CI	CIV	西アフリカ	○	○
+Croatia	クロアチア	HR	HRV	東ヨーロッパ	○	○
+Cuba	キューバ	CU	CUB	中央アメリカ	○	○
+Cyprus	キプロス	CY	CYP	地中海地域	○	○
+Czechia	チェコ	CZ	CZE	東ヨーロッパ	○	○
+Denmark	デンマーク	DK	DNK	北ヨーロッパ	○	○
+Djibouti	ジブチ	DJ	DJI	東アフリカ	○	○
+Dominica	ドミニカ国	DM	DMA	中央アメリカ	○	○
+Dominican Republic	ドミニカ共和国	DO	DOM	中央アメリカ	○	○
+Ecuador	エクアドル	EC	ECU	南アメリカ	○	○
+Egypt	エジプト	EG	EGY	北アフリカ	○	○
+El Salvador	エルサルバドル	SV	SLV	中央アメリカ	○	○
+Equatorial Guinea	赤道ギニア	GQ	GNQ	中央アフリカ	○	○
+Eritrea	エリトリア	ER	ERI	東アフリカ	○	○
+Estonia	エストニア	EE	EST	東ヨーロッパ	○	○
+Ethiopia	エチオピア	ET	ETH	東アフリカ	○	○
+Fiji	フィジー	FJ	FJI	オセアニア	○	○
+Finland	フィンランド	FI	FIN	北ヨーロッパ	○	○
+France	フランス	FR	FRA	西ヨーロッパ	○	○
+Gabon	ガボン	GA	GAB	中央アフリカ	○	○
+Gambia	ガンビア	GM	GMB	西アフリカ	○	○
+Georgia	ジョージア	GE	GEO	東ヨーロッパ	○	○
+Germany	ドイツ	DE	DEU	西ヨーロッパ	○	○
+Ghana	ガーナ	GH	GHA	西アフリカ	○	○
+Greece	ギリシャ	GR	GRC	西ヨーロッパ	○	○
+Grenada	グレナダ	GD	GRD	中央アメリカ	○	○
+Guatemala	グアテマラ	GT	GTM	中央アメリカ	○	○
+Guinea	ギニア	GN	GIN	西アフリカ	○	○
+Guinea-Bissau	ギニアビサウ	GW	GNB	西アフリカ	○	○
+Guyana	ガイアナ	GY	GUY	南アメリカ	○	○
+Haiti	ハイチ	HT	HTI	中央アメリカ	○	○
+Holy See (Vatican City State)	バチカン	VA	VAT	西ヨーロッパ	△	○
+Honduras	ホンジュラス	HN	HND	中央アメリカ	○	○
+Hungary	ハンガリー	HU	HUN	東ヨーロッパ	○	○
+Iceland	アイスランド	IS	ISL	北ヨーロッパ	○	○
+India	インド	IN	IND	南アジア	○	○
+Indonesia	インドネシア	ID	IDN	東南アジア	○	○
+Iran, Islamic Republic of	イラン	IR	IRN	中東	○	○
+Iraq	イラク	IQ	IRQ	中東	○	○
+Ireland	アイルランド	IE	IRL	西ヨーロッパ	○	○
+Israel	イスラエル	IL	ISR	中東	○	○
+Italy	イタリア	IT	ITA	西ヨーロッパ	○	○
+Jamaica	ジャマイカ	JM	JAM	中央アメリカ	○	○
+Japan	日本	JP	JPN	東アジア	○	○
+Jordan	ヨルダン	JO	JOR	中東	○	○
+Kazakhstan	カザフスタン	KZ	KAZ	中央アジア	○	○
+Kenya	ケニア	KE	KEN	東アフリカ	○	○
+Kiribati	キリバス	KI	KIR	オセアニア	○	○
+Korea, Democratic People's Republic of	北朝鮮	KP	PRK	東アジア	○	-
+Korea, Republic of	韓国	KR	KOR	東アジア	○	○
+Kosovo	コソボ	-	-	東ヨーロッパ	-	○
+Kuwait	クウェート	KW	KWT	中東	○	○
+Kyrgyzstan	キルギス	KG	KGZ	中央アジア	○	○
+Lao People's Democratic Republic	ラオス	LA	LAO	東南アジア	○	○
+Latvia	ラトビア	LV	LVA	東ヨーロッパ	○	○
+Lebanon	レバノン	LB	LBN	中東	○	○
+Lesotho	レソト	LS	LSO	南アフリカ	○	○
+Liberia	リベリア	LR	LBR	西アフリカ	○	○
+Libya	リビア	LY	LBY	北アフリカ	○	○
+Liechtenstein	リヒテンシュタイン	LI	LIE	西ヨーロッパ	○	○
+Lithuania	リトアニア	LT	LTU	東ヨーロッパ	○	○
+Luxembourg	ルクセンブルク	LU	LUX	西ヨーロッパ	○	○
+Macedonia, the former Yugoslav Republic	マケドニア旧ユーゴスラビア共和国	MK	MKD	東ヨーロッパ	○	○
+Madagascar	マダガスカル	MG	MDG	インド洋地域	○	○
+Malawi	マラウイ	MW	MWI	南アフリカ	○	○
+Malaysia	マレーシア	MY	MYS	東南アジア	○	○
+Maldives	モルディブ	MV	MDV	インド洋地域	○	○
+Mali	マリ	ML	MLI	西アフリカ	○	○
+Malta	マルタ	MT	MLT	地中海地域	○	○
+Marshall Islands	マーシャル諸島	MH	MHL	オセアニア	○	○
+Mauritania	モーリタニア	MR	MRT	西アフリカ	○	○
+Mauritius	モーリシャス	MU	MUS	南アフリカ	○	○
+Mexico	メキシコ	MX	MEX	中央アメリカ	○	○
+Micronesia, Federated States of	ミクロネシア連邦	FM	FSM	オセアニア	○	○
+Moldova, Republic of	モルドバ	MD	MDA	東ヨーロッパ	○	○
+Monaco	モナコ	MC	MCO	西ヨーロッパ	○	○
+Mongolia	モンゴル	MN	MNG	東アジア	○	○
+Montenegro	モンテネグロ	ME	MNE	東ヨーロッパ	○	○
+Morocco	モロッコ	MA	MAR	北アフリカ	○	○
+Mozambique	モザンビーク	MZ	MOZ	南アフリカ	○	○
+Myanmar	ミャンマー	MM	MMR	東南アジア	○	○
+Nagorno Karabagh Republic	ナゴルノ・カラバフ	-	-	東ヨーロッパ	-	-
+Namibia	ナミビア	NA	NAM	南アフリカ	○	○
+Nauru	ナウル	NR	NRU	オセアニア	○	○
+Nepal	ネパール	NP	NPL	南アジア	○	○
+Netherlands	オランダ	NL	NLD	西ヨーロッパ	○	○
+New Zealand	ニュージーランド	NZ	NZL	オセアニア	○	○
+Nicaragua	ニカラグア	NI	NIC	中央アメリカ	○	○
+Niger	ニジェール	NE	NER	中央アフリカ	○	○
+Nigeria	ナイジェリア	NG	NGA	中央アフリカ	○	○
+Niue	ニウエ	NU	NIU	オセアニア	-	○
+Northern Cyprus	北キプロス	-	-	地中海地域	-	-
+Norway	ノルウェー	NO	NOR	北ヨーロッパ	○	○
+Oman	オマーン	OM	OMN	中東	○	○
+Pakistan	パキスタン	PK	PAK	南アジア	○	○
+Palau	パラオ	PW	PLW	オセアニア	○	○
+Palestinian Territory, Occupied	パレスチナ	PS	PSE	中東	△	-
+Panama	パナマ	PA	PAN	中央アメリカ	○	○
+Papua New Guinea	パプアニューギニア	PG	PNG	オセアニア	○	○
+Paraguay	パラグアイ	PY	PRY	南アメリカ	○	○
+Peru	ペルー	PE	PER	南アメリカ	○	○
+Philippines	フィリピン	PH	PHL	東南アジア	○	○
+Poland	ポーランド	PL	POL	東ヨーロッパ	○	○
+Portugal	ポルトガル	PT	PRT	西ヨーロッパ	○	○
+Pridnestrovian Moldavian Republic	沿ドニエストル	-	-	東ヨーロッパ	-	-
+Qatar	カタール	QA	QAT	中東	○	○
+Romania	ルーマニア	RO	ROU	東ヨーロッパ	○	○
+Russian Federation	ロシア	RU	RUS	ロシア	○	○
+Rwanda	ルワンダ	RW	RWA	中央アフリカ	○	○
+Saint Kitts and Nevis	セントクリストファー・ネイビス	KN	KNA	中央アメリカ	○	○
+Saint Lucia	セントルシア	LC	LCA	中央アメリカ	○	○
+Saint Vincent and the Grenadines	セントビンセントおよびグレナディーン諸島	VC	VCT	中央アメリカ	○	○
+Samoa	サモア	WS	WSM	オセアニア	○	○
+San Marino	サンマリノ	SM	SMR	西ヨーロッパ	○	○
+Sao Tome and Principe	サントメ・プリンシペ	ST	STP	中央アフリカ	○	○
+Saudi Arabia	サウジアラビア	SA	SAU	中東	○	○
+Senegal	セネガル	SN	SEN	西アフリカ	○	○
+Serbia	セルビア	RS	SRB	東ヨーロッパ	○	○
+Seychelles	セーシェル	SC	SYC	インド洋地域	○	○
+Sierra Leone	シエラレオネ	SL	SLE	西アフリカ	○	○
+Singapore	シンガポール	SG	SGP	東南アジア	○	○
+Slovakia	スロバキア	SK	SVK	東ヨーロッパ	○	○
+Slovenia	スロベニア	SI	SVN	東ヨーロッパ	○	○
+Solomon Islands	ソロモン諸島	SB	SLB	オセアニア	○	○
+Somalia	ソマリア	SO	SOM	東アフリカ	○	○
+Somaliland, Republic of	ソマリランド	-	-	東アフリカ	-	-
+South Africa	南アフリカ	ZA	ZAF	南アフリカ	○	○
+South Ossetia	南オセチア	-	-	東ヨーロッパ	-	-
+South Sudan	南スーダン	SS	SSD	東アフリカ	○	○
+Spain	スペイン	ES	ESP	西ヨーロッパ	○	○
+Sri Lanka	スリランカ	LK	LKA	南アジア	○	○
+Sudan	スーダン	SD	SDN	東アフリカ	○	○
+Suriname	スリナム	SR	SUR	南アメリカ	○	○
+Swaziland	スワジランド	SZ	SWZ	南アフリカ	○	○
+Sweden	スウェーデン	SE	SWE	北ヨーロッパ	○	○
+Switzerland	スイス	CH	CHE	西ヨーロッパ	○	○
+Syrian Arab Republic	シリア	SY	SYR	中東	○	○
+Taiwan, Province of China	台湾	TW	TWN	東アジア	-	-
+Tajikistan	タジキスタン	TJ	TJK	中央アジア	○	○
+Tanzania, United Republic of	タンザニア	TZ	TZA	東アフリカ	○	○
+Thailand	タイ	TH	THA	東南アジア	○	○
+Timor-Leste	東ティモール	TL	TLS	東南アジア	○	○
+Togo	トーゴ	TG	TGO	西アフリカ	○	○
+Tonga	トンガ	TO	TON	オセアニア	○	○
+Trinidad and Tobago	トリニダード・トバゴ	TT	TTO	中央アメリカ	○	○
+Tunisia	チュニジア	TN	TUN	北アフリカ	○	○
+Turkey	トルコ	TR	TUR	中東	○	○
+Turkmenistan	トルクメニスタン	TM	TKM	中央アジア	○	○
+Tuvalu	ツバル	TV	TUV	オセアニア	○	○
+Uganda	ウガンダ	UG	UGA	中央アフリカ	○	○
+Ukraine	ウクライナ	UA	UKR	東ヨーロッパ	○	○
+United Arab Emirates	アラブ首長国連邦	AE	ARE	中東	○	○
+United Kingdom	イギリス	GB	GBR	西ヨーロッパ	○	○
+United States	アメリカ	US	USA	北アメリカ	○	○
+Uruguay	ウルグアイ	UY	URY	南アメリカ	○	○
+Uzbekistan	ウズベキスタン	UZ	UZB	中央アジア	○	○
+Vanuatu	バヌアツ	VU	VUT	オセアニア	○	○
+Venezuela, Bolivarian Republic of	ベネズエラ	VE	VEN	南アメリカ	○	○
+Viet Nam	ベトナム	VN	VNM	東南アジア	○	○
+Western Sahara	西サハラ	EH	ESH	西アフリカ	-	-
+Yemen	イエメン	YE	YEM	中東	○	○
+Zambia	ザンビア	ZM	ZMB	南アフリカ	○	○
+Zimbabwe	ジンバブエ	ZW	ZWE	南アフリカ	○	○

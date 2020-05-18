@@ -4,7 +4,7 @@ import random
 PUBLISHERS = ["Reuters", "Huffington Post", "Businessweek", "Contactmusic.com", "Daily Mail"] 
 
 with open("../data/NewsAggregatorDataset/newsCorpora.csv", encoding="utf-8", newline="") as f:
-    reader = csv.reader(f, delimiter = "\t")
+    reader = csv.reader(f, delimiter = "\t", quotechar='|')
 
     # csvファイルのカラム名は次の通り
     # ID TITLE URL PUBLISHER CATEGORY STORY HOSTNAME TIMESTAMP
