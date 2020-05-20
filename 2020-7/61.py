@@ -9,3 +9,6 @@ similarity = np.dot(vector1, vector2) / (np.linalg.norm(vector1) * np.linalg.nor
 
 print(similarity)
 print(model.similarity("United_States", "U.S."))
+
+# 0.7310775
+# 0.73107743
