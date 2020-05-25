@@ -28,7 +28,7 @@ def load_data(phase, batch_size):
         batch_x.append(phase_x[start:end])
         batch_y.append(phase_y[start:end])
 
-    return np.array(batch_x).astype(np.float32), np.array(batch_y).astype(np.float32)
+    return np.array(batch_x).astype(np.float32), np.array(batch_y)
 
 
 class Net(nn.Module):
@@ -76,7 +76,32 @@ for batch_size in BATCH_SIZE:
     print(f"batch_size: {batch_size}")
     print(f"elapsed_time:{elapsed_time}[sec]")
 
-
+# batch_size: 1
+# elapsed_time:2.0793397426605225[sec]
+# batch_size: 2
+# elapsed_time:1.0777838230133057[sec]
+# batch_size: 4
+# elapsed_time:0.529289960861206[sec]
+# batch_size: 8
+# elapsed_time:0.26763224601745605[sec]
+# batch_size: 16
+# elapsed_time:0.1501755714416504[sec]
+# batch_size: 32
+# elapsed_time:0.08773279190063477[sec]
+# batch_size: 64
+# elapsed_time:0.06354379653930664[sec]
+# batch_size: 128
+# elapsed_time:0.03785061836242676[sec]
+# batch_size: 256
+# elapsed_time:0.013755559921264648[sec]
+# batch_size: 512
+# elapsed_time:0.00959920883178711[sec]
+# batch_size: 1024
+# elapsed_time:0.008182764053344727[sec]
+# batch_size: 2048
+# elapsed_time:0.015201091766357422[sec]
+# batch_size: 4096
+# elapsed_time:0.0038673877716064453[sec]
 
 
 
