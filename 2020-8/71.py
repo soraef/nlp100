@@ -33,6 +33,12 @@ x = torch.tensor(train_x[0])
 y = model(x)
 print(y)
 
-X = torch.tensor(train_x[0:3])
+X = torch.tensor(train_x[0:4])
 Y = model(X)
 print(Y)
+
+# tensor([0.2396, 0.2401, 0.2590, 0.2613], grad_fn=<SoftmaxBackward>)
+# tensor([[0.2396, 0.2401, 0.2590, 0.2613],
+#         [0.2457, 0.2501, 0.2573, 0.2469],
+#         [0.2448, 0.2507, 0.2529, 0.2516],
+#         [0.2515, 0.2464, 0.2534, 0.2488]], grad_fn=<SoftmaxBackward>)
