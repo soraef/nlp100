@@ -12,7 +12,7 @@ class Net(nn.Module):
         self.fc_out = nn.Linear(hidden_dim, output_dim)
         self.softmax = nn.LogSoftmax(dim=1)
 
-    # xs: [x_len, batch_size]
+    # xs: [batch_size, xs_len]
     def forward(self, xs):
         embedded = self.emb(xs)
 
