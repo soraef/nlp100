@@ -58,12 +58,9 @@ def load_data(phase, batch_size=1, fix_len=30):
         category = row.split("\t")[0]
 
         words = row.split("\t")[1]
-        # print(words)
         words = re.sub(r'[.,:;!?"]', "", words).split()
         words = map(lambda word: word.lower(), words)
-        # print(list(words))
         word_ids = list(map(get_id, words))
-        # print(len(word_ids))
         lengths.append(len(word_ids))
 
         # word_idsを固定長にする
