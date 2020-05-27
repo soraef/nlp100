@@ -66,12 +66,6 @@ def load_data(phase):
 
 train_x, train_y = load_data("train")
 valid_x, valid_y = load_data("valid")
-
-train_x = train_x[:]
-train_y = train_y[:]
-
-valid_x = valid_x[:]
-valid_y = valid_y[:]
  
 model = Net(emb_dim=300, hidden_dim=500, vocab_size=VOCAB_SIZE, output_dim=4).to(device)
 loss_fn  = nn.NLLLoss()
