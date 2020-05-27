@@ -23,7 +23,7 @@ for data in train_data:
 word2id = {}
 new_id = 1
 for k, v in sorted(word2count.items(), key=lambda x: -x[1]):
-    if v <= 2:
+    if v < 2:
         word2id[k] = 0
     else:
         word2id[k] = new_id
