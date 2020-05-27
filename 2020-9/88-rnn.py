@@ -195,53 +195,118 @@ for hidden_dim in HID_DIM:
 for params in params_list:
     train(params)
 
+# {'hidden_dim': 50, 'dropout': 0, 'n_layers': 1, 'lr': 0.01}
+# max_acc: 0.89140625
+# {'hidden_dim': 50, 'dropout': 0, 'n_layers': 1, 'lr': 0.001}
+# max_acc: 0.878125
+# {'hidden_dim': 50, 'dropout': 0, 'n_layers': 2, 'lr': 0.01}
+# max_acc: 0.9015625
+# {'hidden_dim': 50, 'dropout': 0, 'n_layers': 2, 'lr': 0.001}
+# max_acc: 0.88359375
+# {'hidden_dim': 50, 'dropout': 0, 'n_layers': 3, 'lr': 0.01}
+# max_acc: 0.9
+# {'hidden_dim': 50, 'dropout': 0, 'n_layers': 3, 'lr': 0.001}
+# max_acc: 0.8828125
+# /home/fukui/.pyenv/versions/3.7.4/lib/python3.7/site-packages/torch/nn/modules/rnn.py:54: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+#   "num_layers={}".format(dropout, num_layers))
+# {'hidden_dim': 50, 'dropout': 0.2, 'n_layers': 1, 'lr': 0.01}
+# max_acc: 0.890625
+# {'hidden_dim': 50, 'dropout': 0.2, 'n_layers': 1, 'lr': 0.001}
+# max_acc: 0.875
+# {'hidden_dim': 50, 'dropout': 0.2, 'n_layers': 2, 'lr': 0.01}
+# max_acc: 0.89375
+# {'hidden_dim': 50, 'dropout': 0.2, 'n_layers': 2, 'lr': 0.001}
+# max_acc: 0.8796875
+# {'hidden_dim': 50, 'dropout': 0.2, 'n_layers': 3, 'lr': 0.01}
+# max_acc: 0.8890625
+# {'hidden_dim': 50, 'dropout': 0.2, 'n_layers': 3, 'lr': 0.001}
+# max_acc: 0.88515625
+# /home/fukui/.pyenv/versions/3.7.4/lib/python3.7/site-packages/torch/nn/modules/rnn.py:54: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.5 and num_layers=1
+#   "num_layers={}".format(dropout, num_layers))
+# {'hidden_dim': 50, 'dropout': 0.5, 'n_layers': 1, 'lr': 0.01}
+# max_acc: 0.88828125
+# {'hidden_dim': 50, 'dropout': 0.5, 'n_layers': 1, 'lr': 0.001}
+# max_acc: 0.8796875
+# {'hidden_dim': 50, 'dropout': 0.5, 'n_layers': 2, 'lr': 0.01}
+# max_acc: 0.89375
+# {'hidden_dim': 50, 'dropout': 0.5, 'n_layers': 2, 'lr': 0.001}
+# max_acc: 0.88125
+# {'hidden_dim': 50, 'dropout': 0.5, 'n_layers': 3, 'lr': 0.01}
+# max_acc: 0.89765625
+# {'hidden_dim': 50, 'dropout': 0.5, 'n_layers': 3, 'lr': 0.001}
+# max_acc: 0.88203125
+# {'hidden_dim': 500, 'dropout': 0, 'n_layers': 1, 'lr': 0.01}
+# max_acc: 0.896875
+# {'hidden_dim': 500, 'dropout': 0, 'n_layers': 1, 'lr': 0.001}
+# max_acc: 0.878125
+# {'hidden_dim': 500, 'dropout': 0, 'n_layers': 2, 'lr': 0.01}
+# max_acc: 0.89453125
+# {'hidden_dim': 500, 'dropout': 0, 'n_layers': 2, 'lr': 0.001}
+# max_acc: 0.88515625
+# {'hidden_dim': 500, 'dropout': 0, 'n_layers': 3, 'lr': 0.01}
+# max_acc: 0.8953125
+# {'hidden_dim': 500, 'dropout': 0, 'n_layers': 3, 'lr': 0.001}
+# max_acc: 0.8828125
+# {'hidden_dim': 500, 'dropout': 0.2, 'n_layers': 1, 'lr': 0.01}
+# max_acc: 0.88984375
+# {'hidden_dim': 500, 'dropout': 0.2, 'n_layers': 1, 'lr': 0.001}
+# max_acc: 0.87890625
+# {'hidden_dim': 500, 'dropout': 0.2, 'n_layers': 2, 'lr': 0.01}
+# max_acc: 0.884375
+# {'hidden_dim': 500, 'dropout': 0.2, 'n_layers': 2, 'lr': 0.001}
+# max_acc: 0.88125
+# {'hidden_dim': 500, 'dropout': 0.2, 'n_layers': 3, 'lr': 0.01}
+# max_acc: 0.88125
+# {'hidden_dim': 500, 'dropout': 0.2, 'n_layers': 3, 'lr': 0.001}
+# max_acc: 0.87890625
+# {'hidden_dim': 500, 'dropout': 0.5, 'n_layers': 1, 'lr': 0.01}
+# max_acc: 0.89296875
+# {'hidden_dim': 500, 'dropout': 0.5, 'n_layers': 1, 'lr': 0.001}
+# max_acc: 0.88125
+# {'hidden_dim': 500, 'dropout': 0.5, 'n_layers': 2, 'lr': 0.01}
+# max_acc: 0.89609375
+# {'hidden_dim': 500, 'dropout': 0.5, 'n_layers': 2, 'lr': 0.001}
+# max_acc: 0.878125
+# {'hidden_dim': 500, 'dropout': 0.5, 'n_layers': 3, 'lr': 0.01}
+# max_acc: 0.878125
+# {'hidden_dim': 500, 'dropout': 0.5, 'n_layers': 3, 'lr': 0.001}
+# max_acc: 0.88515625
+# {'hidden_dim': 1000, 'dropout': 0, 'n_layers': 1, 'lr': 0.01}
+# max_acc: 0.88046875
+# {'hidden_dim': 1000, 'dropout': 0, 'n_layers': 1, 'lr': 0.001}
+# max_acc: 0.878125
+# {'hidden_dim': 1000, 'dropout': 0, 'n_layers': 2, 'lr': 0.01}
+# max_acc: 0.8078125
+# {'hidden_dim': 1000, 'dropout': 0, 'n_layers': 2, 'lr': 0.001}
+# max_acc: 0.88515625
+# {'hidden_dim': 1000, 'dropout': 0, 'n_layers': 3, 'lr': 0.01}
+# max_acc: 0.8515625
+# {'hidden_dim': 1000, 'dropout': 0, 'n_layers': 3, 'lr': 0.001}
+# max_acc: 0.8796875
+# {'hidden_dim': 1000, 'dropout': 0.2, 'n_layers': 1, 'lr': 0.01}
+# max_acc: 0.88125
+# {'hidden_dim': 1000, 'dropout': 0.2, 'n_layers': 1, 'lr': 0.001}
+# max_acc: 0.884375
+# {'hidden_dim': 1000, 'dropout': 0.2, 'n_layers': 2, 'lr': 0.01}
+# max_acc: 0.85625
+# {'hidden_dim': 1000, 'dropout': 0.2, 'n_layers': 2, 'lr': 0.001}
+# max_acc: 0.8875
+# {'hidden_dim': 1000, 'dropout': 0.2, 'n_layers': 3, 'lr': 0.01}
+# max_acc: 0.83125
+# {'hidden_dim': 1000, 'dropout': 0.2, 'n_layers': 3, 'lr': 0.001}
+# max_acc: 0.8828125
+# {'hidden_dim': 1000, 'dropout': 0.5, 'n_layers': 1, 'lr': 0.01}
+# max_acc: 0.89296875
+# {'hidden_dim': 1000, 'dropout': 0.5, 'n_layers': 1, 'lr': 0.001}
+# max_acc: 0.88125
+# {'hidden_dim': 1000, 'dropout': 0.5, 'n_layers': 2, 'lr': 0.01}
+# max_acc: 0.78828125
+# {'hidden_dim': 1000, 'dropout': 0.5, 'n_layers': 2, 'lr': 0.001}
+# max_acc: 0.8875
+# {'hidden_dim': 1000, 'dropout': 0.5, 'n_layers': 3, 'lr': 0.01}
+# max_acc: 0.81640625
+# {'hidden_dim': 1000, 'dropout': 0.5, 'n_layers': 3, 'lr': 0.001}
+# max_acc: 0.88984375
 
-
-# SGD
-# == epoch: 1000 ==
-# loss: 0.22784992507318172
-# train_acc: 0.9241615853658537
-# acc: 0.8640625
-
-# Adam
-# 
-# == epoch: 10 ==
-# loss: 0.17576771284021983
-# train_acc: 0.942454268292683
-# acc: 0.88203125
-# == epoch: 20 ==
-# loss: 0.026320541322958177
-# train_acc: 0.9918064024390244
-# acc: 0.8796875
-# == epoch: 30 ==
-# loss: 0.006679740768471142
-# train_acc: 0.9976181402439024
-# acc: 0.88125
-# == epoch: 40 ==
-# loss: 0.007143074237718814
-# train_acc: 0.997141768292683
-# acc: 0.88671875
-# == epoch: 50 ==
-# loss: 0.005347304977476597
-# train_acc: 0.9977134146341463
-# acc: 0.88515625
-# == epoch: 60 ==
-# loss: 0.0019344789907336235
-# train_acc: 0.9983803353658537
-# acc: 0.890625
-# == epoch: 70 ==
-# loss: 0.0018229736242352463
-# train_acc: 0.9982850609756098
-# acc: 0.89296875
-# == epoch: 80 ==
-# loss: 0.0017489452800917916
-# train_acc: 0.9982850609756098
-# acc: 0.89140625
-# == epoch: 90 ==
-# loss: 0.0016871815570062253
-# train_acc: 0.9983803353658537
-# acc: 0.89296875
-# == epoch: 100 ==
-# loss: 0.0016485011750241604
-# train_acc: 0.9983803353658537
-# acc: 0.89140625
+# {'hidden_dim': 50, 'dropout': 0, 'n_layers': 2, 'lr': 0.01}
+# max_acc: 0.9015625
