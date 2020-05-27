@@ -97,8 +97,6 @@ for epoch in range(10):
         y = torch.tensor(y).view(1).to(device)
 
         pred_y = model(x)
-        # print(y.size())
-        # print(pred_y.size())
 
         loss = loss_fn(pred_y, y)
 
