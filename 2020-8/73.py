@@ -29,12 +29,12 @@ class Net(nn.Module):
 # モデルと損失関数の定義
 model = Net()
 loss_fn  = nn.CrossEntropyLoss()
-optimizer = torch.optim.SGD(model.parameters(), lr=1e-4)
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
 
 # データの準備
 train_x, train_y = load_data("train")
 
-for epoch in range(100):
+for epoch in range(10):
     total_loss = 0
     for x, y in zip(train_x, train_y):
         x = torch.tensor(x)

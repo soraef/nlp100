@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>対話</h3>
+
+<input type="text" name="text" size="40" id="text">
+<input type="submit" class="submit">
+
+<div class="dialog">
+
+</div>
+
+<script>
+$(document).ready(function (){
+    $(document).on("click", ".submit", function(){
+        text = $("#text").val()
+        $("#text").val("")
+
+        $(".dialog").append("<div class='user'> user> " + text + "</div>")
+
+        $.ajax("talk", {
+            type: "post",
+            data: text,
+            dataType: "json"
+        }).done(function(data){
+            system_text = data["text"]
+            $(".dialog").append("<div class='system'> sys>" + system_text + "</div>")
+            console.log(data["text"])
+        }).fail(function(){
+            console.log("fail")
+        })
+    });
+});
+</script>
+{% endblock %}

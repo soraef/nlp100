@@ -1,0 +1,3 @@
+$ onmt_translate -model demo-model_step_95000.pt -src data/src-test.txt -output pred.txt -replace_unk -verbose
+$ perl multi-bleu.perl tgt-test.txt < pred.txt 
+BLEU = 0.23, 19.5/5.0/1.8/0.4 (BP=0.078, ratio=0.281, hyp_len=3632, ref_len=12912)

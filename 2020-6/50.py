@@ -5,10 +5,13 @@ PUBLISHERS = ["Reuters", "Huffington Post", "Businessweek", "Contactmusic.com", 
 
 with open("../data/NewsAggregatorDataset/newsCorpora.csv", encoding="utf-8", newline="") as f:
     reader = csv.reader(f, delimiter = "\t", quotechar='|')
+    data = f.readlines()
+    data = map(lambda r: r.split("\t"), data)
+
 
     # csvファイルのカラム名は次の通り
     # ID TITLE URL PUBLISHER CATEGORY STORY HOSTNAME TIMESTAMP
-    data = [row for row in reader if row[3] in PUBLISHERS]
+    data = [row for row in data if row[3] in PUBLISHERS]
 
 random.shuffle(data)
 
@@ -25,6 +28,6 @@ def write_data(filename, data):
         writer = csv.writer(f, delimiter = "\t")
         writer.writerows(writing_data)
 
-write_data("../data/train.txt", train_data)
-write_data("../data/valid.txt", valid_data)
-write_data("../data/test.txt", test_data)
+write_data("../data/train2.txt", train_data)
+write_data("../data/valid2.txt", valid_data)
+write_data("../data/test2.txt", test_data)

@@ -1,0 +1,2 @@
+# ssh 130.153.158.3 -L 6006:localhost:6006
+# tensorboard --logdir Jun-02_19-09-44/
